@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mueblería Moderna</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f5f5f5;
+      color:#222;
+    }
+
+    header{
+      height:100vh;
+      background:url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop') center/cover;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      position:relative;
+    }
+
+    header::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.5);
+    }
+
+    .hero{
+      position:relative;
+      z-index:2;
+      color:white;
+      max-width:700px;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:1.2rem;
+      margin-bottom:30px;
+      line-height:1.5;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:15px 35px;
+      background:#fff;
+      color:#111;
+      text-decoration:none;
+      border-radius:10px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+    }
+
+    .section{
+      padding:80px 10%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.5rem;
+      margin-bottom:50px;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:20px;
+      overflow:hidden;
+      box-shadow:0 10px 25px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+    }
+
+    .price{
+      font-size:1.3rem;
+      font-weight:bold;
+      margin:15px 0;
+    }
+
+    .about{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .about img{
+      width:100%;
+      border-radius:20px;
+    }
+
+    footer{
+      background:#111;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      .about{
+        grid-template-columns:1fr;
+      }
+
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="hero">
+      <h1>Muebles Modernos</h1>
+      <p>
+        Diseños elegantes y minimalistas para transformar tu hogar.
+      </p>
+
+      <a href="#productos" class="btn">
+        Ver Catálogo
+      </a>
+    </div>
+  </header>
+
+  <section class="section" id="productos">
+
+    <h2 class="section-title">
+      Productos Destacados
+    </h2>
+
+    <div class="products">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Sillón Premium</h3>
+          <p>Diseño moderno y máxima comodidad.</p>
+
+          <div class="price">$299.999</div>
+
+          <a href="#" class="btn">
+            Comprar
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Mesa Minimalista</h3>
+          <p>Perfecta para living modernos.</p>
+
+          <div class="price">$189.999</div>
+
+          <a href="#" class="btn">
+            Comprar
+          </a>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?q=80&w=1200&auto=format&fit=crop">
+
+        <div class="card-content">
+          <h3>Silla Nórdica</h3>
+          <p>Minimalismo y confort en un solo producto.</p>
+
+          <div class="price">$89.999</div>
+
+          <a href="#" class="btn">
+            Comprar
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <div class="about">
+
+      <div>
+        <h2 style="font-size:2.5rem;margin-bottom:20px;">
+          Diseño & Calidad
+        </h2>
+
+        <p style="line-height:1.8;font-size:1.1rem;">
+          Creamos muebles modernos con materiales premium,
+          pensados para durar y darle estilo a cada espacio.
+        </p>
+      </div>
+
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+  </section>
+
+  <footer>
+
+    <h2 style="margin-bottom:15px;">
+      Mueblería Moderna
+    </h2>
+
+    <p>
+      WhatsApp: +54 11 1234-5678
+    </p>
+
+  </footer>
+
+  <script>
+    
+    const buttons = document.querySelectorAll('.btn');
+
+    buttons.forEach(btn => {
+
+      btn.addEventListener('click', () => {
+
+        console.log('Botón presionado');
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
